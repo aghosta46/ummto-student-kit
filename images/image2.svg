@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" aria-hidden="true">
+  <rect width="800" height="500" fill="#F8F7F2"/>
+  <rect x="0" y="0" width="800" height="80" fill="#0F2A5C"/>
+  <text x="400" y="50" text-anchor="middle"
+        fill="#FFFFFF" font-family="Arial, sans-serif"
+        font-size="24" font-weight="700">
+    PACK INFORMATIQUE — Tout pour bien démarrer
+  </text>
+
+  <!-- Items -->
+  <g transform="translate(80,150)">
+    <rect width="180" height="120" rx="12" fill="#FFFFFF" stroke="#0F2A5C" stroke-width="2"/>
+    <text x="90" y="55" text-anchor="middle" font-size="48">📒</text>
+    <text x="90" y="100" text-anchor="middle" fill="#0F2A5C"
+          font-family="Arial" font-size="13" font-weight="600">Carnet algos</text>
+  </g>
+  <g transform="translate(310,150)">
+    <rect width="180" height="120" rx="12" fill="#FFFFFF" stroke="#FFB800" stroke-width="2"/>
+    <text x="90" y="55" text-anchor="middle" font-size="48">⌨️</text>
+    <text x="90" y="100" text-anchor="middle" fill="#0F2A5C"
+          font-family="Arial" font-size="13" font-weight="600">Clavier</text>
+  </g>
+  <g transform="translate(540,150)">
+    <rect width="180" height="120" rx="12" fill="#FFFFFF" stroke="#0F2A5C" stroke-width="2"/>
+    <text x="90" y="55" text-anchor="middle" font-size="48">🖱️</text>
+    <text x="90" y="100" text-anchor="middle" fill="#0F2A5C"
+          font-family="Arial" font-size="13" font-weight="600">Souris</text>
+  </g>
+
+  <g transform="translate(195,300)">
+    <rect width="180" height="120" rx="12" fill="#FFFFFF" stroke="#FFB800" stroke-width="2"/>
+    <text x="90" y="55" text-anchor="middle" font-size="48">💾</text>
+    <text x="90" y="100" text-anchor="middle" fill="#0F2A5C"
+          font-family="Arial" font-size="13" font-weight="600">Clé USB</text>
+  </g>
+  <g transform="translate(425,300)">
+    <rect width="180" height="120" rx="12" fill="#FFFFFF" stroke="#0F2A5C" stroke-width="2"/>
+    <text x="90" y="55" text-anchor="middle" font-size="48">📱</text>
+    <text x="90" y="100" text-anchor="middle" fill="#0F2A5C"
+          font-family="Arial" font-size="13" font-weight="600">Support PC</text>
+  </g>
+
+  <text x="400" y="475" text-anchor="middle" fill="#0F2A5C"
+        font-family="Arial" font-size="14" font-weight="600" opacity=".7">
+    Pensé pour les étudiants. Livré partout en Algérie.
+  </text>
+</svg>

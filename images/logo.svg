@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <!-- Carré arrondi navy en fond -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0F2A5C"/>
+
+  <!-- Petit accent or en haut à droite -->
+  <circle cx="50" cy="14" r="4" fill="#FFB800"/>
+
+  <!-- "USK" stylisé - Université Student Kit -->
+  <!-- U (blanc) -->
+  <path d="M11 18 V36 Q11 42 17 42 Q23 42 23 36 V18 H19 V36 Q19 38 17 38 Q15 38 15 36 V18 Z"
+        fill="#FFFFFF"/>
+
+  <!-- S (or - couleur principale du milieu pour attirer l'œil) -->
+  <path d="M27 22 Q27 18 31 18 H38 V22 H32 Q31 22 31 23 Q31 24 32 24 L36 25
+           Q39 26 39 30 Q39 34 39 36 Q39 42 33 42 H26 V38 H32 Q34 38 34 36
+           Q34 34 33 34 L29 33 Q27 32 27 28 Z"
+        fill="#FFB800"/>
+
+  <!-- K (blanc) -->
+  <path d="M43 18 V42 H47 V32 L53 42 H58 L51 30 L57 18 H52 L47 28 V18 Z"
+        fill="#FFFFFF"/>
+
+  <!-- Toque graduation en bas -->
+  <path d="M14 50 L32 46 L50 50 L32 54 Z"
+        fill="#FFB800" opacity="0.95"/>
+  <path d="M48 50 L48 54 Q48 55 49 55 Q50 55 50 54 L50 50 Z"
+        fill="#FFB800"/>
+</svg>
