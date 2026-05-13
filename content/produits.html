@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La boutique UMMTO Student Kit : tous les packs et accessoires pour étudiants UMMTO, avec filtres par catégorie, filière et tri par prix.">
+    <title>Boutique — UMMTO Student Kit</title>
+    <link rel="stylesheet" href="../style/design.css">
+    <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand" aria-label="Accueil UMMTO Student Kit">
+                <img src="../images/logo.svg" alt="" class="brand-logo">
+                <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produits.html" class="active">Boutique</a></li>
+                    <li><a href="quiz.html">Mon Pack</a></li>
+                    <li><a href="ummto.html">Guide UMMTO</a></li>
+                    <li><a href="commande.html">Panier <span id="cartCount" class="cart-badge">0</span></a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="inscription.html">Inscription</a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="connexion.html" class="btn-nav">Connexion</a></li>
+                    <li class="auth-link" data-when="logged-in"><span id="userGreeting" class="user-greeting"></span></li>
+                    <li class="auth-link" data-when="logged-in"><a href="#" id="logoutBtn" class="btn-nav">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="shop-header">
+            <div class="container">
+                <span class="badge badge-ummto">★ Spécial étudiants UMMTO</span>
+                <h1>La boutique des étudiants.</h1>
+                <p class="shop-lead">
+                    Tous nos packs et accessoires, avec une mise en avant spéciale pour la
+                    filière <strong>Informatique</strong>. Utilise les filtres pour trouver
+                    exactement ce qu'il te faut.
+                </p>
+            </div>
+        </section>
+
+        <section class="shop-filters">
+            <div class="container">
+                <div class="filters-grid">
+
+                    <div class="filter-group filter-search">
+                        <label for="searchInput" class="visually-hidden">Recherche</label>
+                        <input type="search" id="searchInput" placeholder="🔎 Rechercher un pack…">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="categoryFilter">Catégorie</label>
+                        <select id="categoryFilter">
+                            <option value="all">Toutes</option>
+                            <option value="Informatique">Informatique</option>
+                            <option value="Révision">Révision</option>
+                            <option value="Organisation">Organisation</option>
+                            <option value="Médecine / Biologie">Médecine / Biologie</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Budget">Budget</option>
+                            <option value="Accessoires PC">Accessoires PC</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filiereFilter">Filière</label>
+                        <select id="filiereFilter">
+                            <option value="all">Toutes</option>
+                            <option value="Informatique">Informatique</option>
+                            <option value="Médecine">Médecine</option>
+                            <option value="Biologie">Biologie</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Toutes">Toutes filières</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortSelect">Tri par prix</label>
+                        <select id="sortSelect">
+                            <option value="default">Par défaut</option>
+                            <option value="asc">Prix croissant ↑</option>
+                            <option value="desc">Prix décroissant ↓</option>
+                        </select>
+                    </div>
+
+                    <button id="resetFilters" class="btn btn-ghost">Réinitialiser</button>
+                </div>
+
+                <div class="subcat-bar" id="subcatBar">
+                    <span class="subcat-label">Sous-catégories Informatique :</span>
+                    <div class="subcat-chips" id="subcatChips">
+                        <button class="chip chip-active" data-sub="all">Toutes</button>
+                        <button class="chip" data-sub="Programmation">Programmation</button>
+                        <button class="chip" data-sub="Mathématiques">Mathématiques</button>
+                        <button class="chip" data-sub="Système d'exploitation">Système &amp; Archi</button>
+                        <button class="chip" data-sub="Réseaux">Réseaux</button>
+                        <button class="chip" data-sub="Base de données">Base de données</button>
+                        <button class="chip" data-sub="Développement Web">Développement Web</button>
+                        <button class="chip" data-sub="Théorie des langages">Théorie des langages</button>
+                        <button class="chip" data-sub="Cybersécurité">Cybersécurité</button>
+                        <button class="chip" data-sub="Accessoires PC">Accessoires PC</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-grid-section">
+            <div class="container">
+                <div class="results-bar">
+                    <p id="resultsCount" aria-live="polite"></p>
+                </div>
+
+                <div id="productsGrid" class="products-grid" aria-live="polite">
+
+                </div>
+
+                <div id="emptyState" class="empty-state" hidden>
+                    <span class="empty-icon">😕</span>
+                    <h3>Aucun produit ne correspond.</h3>
+                    <p>Essaie d'ajuster les filtres ou la recherche.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-bottom-only">
+            <small>&copy; 2025/2026 — UMMTO Student Kit · Projet universitaire UMMTO · Module Développement d'Applications Web</small>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/theme.js"></script>
+    <script>
+        // Initialise l'affichage de la boutique au chargement
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof initShopPage === 'function') {
+                initShopPage();
+            }
+        });
+    </script>
+</body>
+</html>

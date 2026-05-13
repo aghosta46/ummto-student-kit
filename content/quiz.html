@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trouve ton pack idéal en 4 questions : UMMTO Student Kit te recommande automatiquement le pack adapté à ta filière, ton niveau et ton budget.">
+    <title>Mon Pack — Trouve ton pack idéal | UMMTO Student Kit</title>
+    <link rel="stylesheet" href="../style/design.css">
+    <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand" aria-label="Accueil UMMTO Student Kit">
+                <img src="../images/logo.svg" alt="" class="brand-logo">
+                <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produits.html">Boutique</a></li>
+                    <li><a href="quiz.html" class="active">Mon Pack</a></li>
+                    <li><a href="ummto.html">Guide UMMTO</a></li>
+                    <li><a href="commande.html">Panier <span id="cartCount" class="cart-badge">0</span></a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="inscription.html">Inscription</a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="connexion.html" class="btn-nav">Connexion</a></li>
+                    <li class="auth-link" data-when="logged-in"><span id="userGreeting" class="user-greeting"></span></li>
+                    <li class="auth-link" data-when="logged-in"><a href="#" id="logoutBtn" class="btn-nav">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="quiz-section">
+            <div class="container">
+
+                <header class="quiz-header">
+                    <span class="badge badge-ummto">★ Spécial étudiants UMMTO</span>
+                    <h1>🎯 Trouve ton <span class="accent">pack idéal</span>.</h1>
+                    <p class="quiz-lead">
+                        Quatre questions, trente secondes, et notre algorithme te recommande
+                        le pack qui colle vraiment à ta filière, ton niveau et ton budget.
+                        Pour les <strong>informaticiens</strong>, on pousse encore plus loin
+                        avec des questions spécifiques par matière.
+                    </p>
+                </header>
+
+                <article class="quiz-card">
+
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                    </div>
+                    <div class="quiz-step-indicator" id="quizStepIndicator">Étape 1 / 4</div>
+
+                    <div id="quizContent">
+
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button id="quizPrev" class="btn btn-ghost" hidden>← Précédent</button>
+                        <button id="quizNext" class="btn btn-primary" disabled>Suivant →</button>
+                    </div>
+                </article>
+
+                <article class="quiz-result" id="quizResult" hidden>
+                    <div class="quiz-result-header">
+                        <span class="quiz-result-eyebrow">Notre recommandation</span>
+                        <h2 id="quizResultTitle">Pack recommandé</h2>
+                        <p id="quizResultLead">Voici le pack qui colle à ton profil.</p>
+                    </div>
+
+                    <div class="quiz-result-card" id="quizResultCard">
+
+                    </div>
+
+                    <div class="quiz-result-actions">
+                        <button id="quizRestart" class="btn btn-ghost">↻ Refaire le quiz</button>
+                        <a href="produits.html" class="btn btn-secondary">Voir tous les packs</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-bottom-only">
+            <small>&copy; 2025/2026 — UMMTO Student Kit · Projet universitaire UMMTO · Module Développement d'Applications Web</small>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/theme.js"></script>
+    <script src="../javascript/quiz.js"></script>
+</body>
+</html>

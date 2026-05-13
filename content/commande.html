@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finalise ta commande UMMTO Student Kit : panier, livraison, mode de paiement.">
+    <title>Panier &amp; Commande — UMMTO Student Kit</title>
+    <link rel="stylesheet" href="../style/design.css">
+    <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand" aria-label="Accueil UMMTO Student Kit">
+                <img src="../images/logo.svg" alt="" class="brand-logo">
+                <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produits.html">Boutique</a></li>
+                    <li><a href="quiz.html">Mon Pack</a></li>
+                    <li><a href="ummto.html">Guide UMMTO</a></li>
+                    <li><a href="commande.html" class="active">Panier <span id="cartCount" class="cart-badge">0</span></a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="inscription.html">Inscription</a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="connexion.html" class="btn-nav">Connexion</a></li>
+                    <li class="auth-link" data-when="logged-in"><span id="userGreeting" class="user-greeting"></span></li>
+                    <li class="auth-link" data-when="logged-in"><a href="#" id="logoutBtn" class="btn-nav">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="shop-header">
+            <div class="container">
+                <span class="badge badge-ummto">★ Spécial étudiants UMMTO</span>
+                <h1>Ton panier &amp; ta commande.</h1>
+                <p class="shop-lead">
+                    Vérifie ta sélection puis remplis le formulaire pour finaliser
+                    ta commande (simulation locale, projet universitaire).
+                </p>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <div class="container order-grid">
+
+                <article class="order-cart">
+                    <h2>🛒 Mon panier</h2>
+
+                    <div id="cartList" class="cart-list">
+
+                    </div>
+
+                    <div id="cartEmpty" class="empty-state empty-state-sm" hidden>
+                        <span class="empty-icon">🛒</span>
+                        <h3>Ton panier est vide.</h3>
+                        <p>Découvre nos packs étudiants pour bien démarrer.</p>
+                        <a href="produits.html" class="btn btn-primary">Voir la boutique →</a>
+                    </div>
+
+                    <div id="cartSummary" class="cart-summary" hidden>
+                        <div class="cart-summary-row">
+                            <span>Sous-total</span>
+                            <span id="cartSubtotal">0 DA</span>
+                        </div>
+                        <div class="cart-summary-row">
+                            <span>Livraison</span>
+                            <span id="cartShipping">0 DA</span>
+                        </div>
+                        <div class="cart-summary-row cart-total">
+                            <span>Total</span>
+                            <span id="cartTotal">0 DA</span>
+                        </div>
+                        <button id="clearCart" class="btn btn-ghost btn-block">Vider le panier</button>
+                    </div>
+                </article>
+
+                <article class="order-form-card">
+                    <h2>📦 Informations de livraison</h2>
+
+                    <form id="orderForm" class="form" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Nom complet <span class="req">*</span></label>
+                            <input type="text" id="fullName" name="fullName"
+                                placeholder="Massinissa Aboutite" autocomplete="name" required>
+                            <small class="form-error" id="err-fullName"></small>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Téléphone <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone"
+                                    placeholder="0555 12 34 56" autocomplete="tel" required>
+                                <small class="form-error" id="err-phone"></small>
+                                <small class="form-hint">Format : 05/06/07 + 8 chiffres ou +213…</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="wilaya">Wilaya <span class="req">*</span></label>
+                                <select id="wilaya" name="wilaya" required>
+                                    <option value="">— Sélectionner —</option>
+                                    <option>Adrar</option><option>Chlef</option><option>Laghouat</option>
+                                    <option>Oum El Bouaghi</option><option>Batna</option><option>Béjaïa</option>
+                                    <option>Biskra</option><option>Béchar</option><option>Blida</option>
+                                    <option>Bouira</option><option>Tamanrasset</option><option>Tébessa</option>
+                                    <option>Tlemcen</option><option>Tiaret</option><option>Tizi-Ouzou</option>
+                                    <option>Alger</option><option>Djelfa</option><option>Jijel</option>
+                                    <option>Sétif</option><option>Saïda</option><option>Skikda</option>
+                                    <option>Sidi Bel Abbès</option><option>Annaba</option><option>Guelma</option>
+                                    <option>Constantine</option><option>Médéa</option><option>Mostaganem</option>
+                                    <option>M'Sila</option><option>Mascara</option><option>Ouargla</option>
+                                    <option>Oran</option><option>El Bayadh</option><option>Illizi</option>
+                                    <option>Bordj Bou Arreridj</option><option>Boumerdès</option><option>El Tarf</option>
+                                    <option>Tindouf</option><option>Tissemsilt</option><option>El Oued</option>
+                                    <option>Khenchela</option><option>Souk Ahras</option><option>Tipaza</option>
+                                    <option>Mila</option><option>Aïn Defla</option><option>Naâma</option>
+                                    <option>Aïn Témouchent</option><option>Ghardaïa</option><option>Relizane</option>
+                                    <option>Timimoun</option><option>Bordj Badji Mokhtar</option>
+                                    <option>Ouled Djellal</option><option>Béni Abbès</option>
+                                    <option>In Salah</option><option>In Guezzam</option>
+                                    <option>Touggourt</option><option>Djanet</option>
+                                    <option>El M'Ghair</option><option>El Meniaa</option>
+                                </select>
+                                <small class="form-error" id="err-wilaya"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Adresse <span class="req">*</span></label>
+                            <textarea id="address" name="address" rows="2"
+                                placeholder="Numéro, rue, quartier, ville…" autocomplete="street-address" required></textarea>
+                            <small class="form-error" id="err-address"></small>
+                        </div>
+
+                        <fieldset class="form-fieldset">
+                            <legend>Mode de livraison <span class="req">*</span></legend>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="domicile" required>
+                                <span class="radio-card-body">
+                                    <strong>🏠 Domicile</strong>
+                                    <small>Livraison à ton adresse · 600 DA</small>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="bureau" required>
+                                <span class="radio-card-body">
+                                    <strong>🏢 Bureau de poste</strong>
+                                    <small>Stop-Desk Yalidine · 350 DA</small>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="campus" required>
+                                <span class="radio-card-body">
+                                    <strong>🎓 Campus UMMTO</strong>
+                                    <small>Hasnaoua · Bastos · Tamda · Boukhalfa · Oued Aïssi — <strong>Gratuit</strong></small>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="cite" required>
+                                <span class="radio-card-body">
+                                    <strong>🏠 Cité universitaire</strong>
+                                    <small>M'Douha · Boukhalfa · Draâ Ben Khedda · Tamda · Rhahlia — <strong>Gratuit</strong></small>
+                                </span>
+                            </label>
+                            <small class="form-error" id="err-delivery"></small>
+
+                            <div class="form-group" id="siteUmmtoGroup" style="margin-top:14px; display:none;">
+                                <label for="siteUmmto">Précise ton site UMMTO (optionnel)</label>
+                                <select id="siteUmmto" name="siteUmmto">
+                                    <option value="">— Choisis ton site / cité —</option>
+                                    <optgroup label="Campus">
+                                        <option value="Hasnaoua I">Hasnaoua I (rectorat)</option>
+                                        <option value="Hasnaoua II - Bastos">Hasnaoua II — Bastos (FGEI / FS)</option>
+                                        <option value="Tamda 1">Tamda 1</option>
+                                        <option value="Tamda 2">Tamda 2</option>
+                                        <option value="Boukhalfa">Boukhalfa</option>
+                                        <option value="Oued Aissi">Oued Aïssi</option>
+                                    </optgroup>
+                                    <optgroup label="Cités universitaires">
+                                        <option value="Cite M'Douha">Cité M'Douha</option>
+                                        <option value="Cite Boukhalfa 1">Cité Boukhalfa 1</option>
+                                        <option value="Cite Boukhalfa 2">Cité Boukhalfa 2</option>
+                                        <option value="Cite Draa Ben Khedda">Cité Draâ Ben Khedda</option>
+                                        <option value="Cite Tamda">Cité Tamda</option>
+                                        <option value="Cite Rhahlia">Cité Rhahlia</option>
+                                        <option value="Cite Oued Aissi 1">Cité Oued Aïssi 1</option>
+                                        <option value="Cite Oued Aissi 2">Cité Oued Aïssi 2</option>
+                                        <option value="Cite Didouche Mourad">Cité Didouche Mourad (ex-ILE)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend>Mode de paiement <span class="req">*</span></legend>
+                            <label class="radio-card">
+                                <input type="radio" name="payment" value="livraison" required>
+                                <span class="radio-card-body">
+                                    <strong>💵 À la livraison</strong>
+                                    <small>Paiement en espèces à la réception</small>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="payment" value="baridimob" required>
+                                <span class="radio-card-body">
+                                    <strong>📱 BaridiMob</strong>
+                                    <small>Paiement via app Algérie Poste</small>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="payment" value="ccp" required>
+                                <span class="radio-card-body">
+                                    <strong>🏦 Virement CCP</strong>
+                                    <small>Virement classique avant expédition</small>
+                                </span>
+                            </label>
+                            <small class="form-error" id="err-payment"></small>
+                        </fieldset>
+
+                        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submitOrder">
+                            ✅ Confirmer ma commande
+                        </button>
+                    </form>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="orders-history-section" id="ordersHistorySection" hidden>
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">Historique</span>
+                    <h2>Tes commandes simulées</h2>
+                </header>
+                <div id="ordersHistoryList" class="orders-history-list"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-bottom-only">
+            <small>&copy; 2025/2026 — UMMTO Student Kit · Projet universitaire UMMTO · Module Développement d'Applications Web</small>
+        </div>
+    </footer>
+
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof initOrderPage === 'function') {
+                initOrderPage();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UMMTO Student Kit — la boutique des étudiants algériens. Packs, accessoires et recommandations intelligentes pour réussir tes études. Optimisé pour les étudiants UMMTO de Tizi-Ouzou.">
+    <title>UMMTO Student Kit — Pour tous les étudiants algériens</title>
+    <link rel="stylesheet" href="style/design.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand" aria-label="Accueil UMMTO Student Kit">
+                <img src="images/logo.svg" alt="" class="brand-logo">
+                <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="content/produits.html">Boutique</a></li>
+                    <li><a href="content/quiz.html">Mon Pack</a></li>
+                    <li><a href="content/ummto.html">Guide UMMTO</a></li>
+                    <li><a href="content/commande.html">Panier <span id="cartCount" class="cart-badge">0</span></a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="content/inscription.html">Inscription</a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="content/connexion.html" class="btn-nav">Connexion</a></li>
+                    <li class="auth-link" data-when="logged-in"><span id="userGreeting" class="user-greeting"></span></li>
+                    <li class="auth-link" data-when="logged-in"><a href="#" id="logoutBtn" class="btn-nav">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge badge-ummto">★ Pour tous les étudiants algériens · Optimisé UMMTO</span>
+                    <h1>Le kit qui te suit<br>de la <span class="accent">L1 au Master</span>.</h1>
+                    <p class="hero-subtitle">
+                        UMMTO Student Kit, c'est la boutique pensée pour <strong>tous les étudiants algériens</strong>.
+                        Des packs adaptés à ta filière, ton niveau et ton budget — livrés dans les
+                        48 wilayas, avec une attention toute particulière au programme de
+                        <strong>l'UMMTO de Tizi-Ouzou</strong> et aux futurs <strong>informaticiens</strong>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="content/produits.html" class="btn btn-primary">Voir la boutique →</a>
+                        <a href="content/quiz.html" class="btn btn-secondary">🎯 Trouver mon pack idéal</a>
+                    </div>
+
+                    <ul class="hero-stats">
+                        <li><strong>22+</strong><span>Packs étudiants</span></li>
+                        <li><strong>48</strong><span>Wilayas livrées</span></li>
+                        <li><strong>UMMTO</strong><span>Optimisé Tizi-Ouzou</span></li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-card hero-card-1">
+                        <div class="card-icon">
+                            <img src="images/hero-1.jpg" alt="" class="card-img" onerror="this.remove();">
+                            <span class="card-emoji">💻</span>
+                        </div>
+                        <h4>Pack Programmation</h4>
+                        <p>Clavier, souris, fiches, stickers raccourcis</p>
+                        <span class="price">4 200 DA</span>
+                    </div>
+                    <div class="hero-card hero-card-2">
+                        <div class="card-icon">
+                            <img src="images/hero-2.jpg" alt="" class="card-img" onerror="this.remove();">
+                            <span class="card-emoji">🛡️</span>
+                        </div>
+                        <h4>Pack Cybersécurité</h4>
+                        <p>Linux, sécurité web, clé USB</p>
+                        <span class="price">3 800 DA</span>
+                    </div>
+                    <div class="hero-card hero-card-3">
+                        <div class="card-icon">
+                            <img src="images/hero-3.jpg" alt="" class="card-img" onerror="this.remove();">
+                            <span class="card-emoji">📚</span>
+                        </div>
+                        <h4>Pack Révision L2</h4>
+                        <p>Algo, BDD, SE, Réseaux, TL</p>
+                        <span class="price">1 900 DA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">Pourquoi UMMTO Student Kit ?</span>
+                    <h2>On a pensé à tout, pour que tu n'aies plus à y penser.</h2>
+                </header>
+
+                <div class="features-grid">
+                    <article class="feature">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Adapté à ta filière</h3>
+                        <p>Chaque pack est composé en fonction des matières et besoins réels des étudiants algériens, avec une attention particulière au programme UMMTO.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>Gain de temps</h3>
+                        <p>Plus de listes interminables : un seul clic et tu as tout ce qu'il te faut.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon">💰</div>
+                        <h3>Budget contrôlé</h3>
+                        <p>Des packs économiques aux setups complets, tu choisis selon ton budget.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Recommandation intelligente</h3>
+                        <p>Notre quiz analyse tes besoins et te propose le pack idéal en 30 secondes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="informatique">
+            <div class="container">
+                <header class="section-header section-header-light">
+                    <span class="eyebrow eyebrow-light">★ Spécial Informatique</span>
+                    <h2>Étudiants en Informatique, on est <span class="accent-yellow">là pour vous</span>.</h2>
+                    <p class="section-lead">
+                        Du carnet d'algorithmes au setup PC complet, en passant par les fiches
+                        de Réseaux et Bases de Données — UMMTO Student Kit, c'est avant tout une
+                        boutique faite par et pour les étudiants du département d'Informatique
+                        de la Faculté de Génie Électrique et Informatique.
+                    </p>
+                </header>
+
+                <div class="info-tracks">
+                    <article class="track">
+                        <h3>💻 Programmation</h3>
+                        <p>Algo, structures de données, fiches logique, stickers raccourcis.</p>
+                    </article>
+                    <article class="track">
+                        <h3>🌐 Développement Web</h3>
+                        <p>HTML, CSS, JavaScript, balises, propriétés, stickers VS Code.</p>
+                    </article>
+                    <article class="track">
+                        <h3>🔌 Réseaux</h3>
+                        <p>Câble Ethernet, fiches OSI/TCP-IP, schémas, mini testeur.</p>
+                    </article>
+                    <article class="track">
+                        <h3>🗄️ Bases de Données</h3>
+                        <p>Carnet SQL, fiches requêtes, planning de révision, clé USB.</p>
+                    </article>
+                    <article class="track">
+                        <h3>⚙️ Système d'exploitation</h3>
+                        <p>Fiches processus, ordonnancement, commandes Linux, planning TP.</p>
+                    </article>
+                    <article class="track">
+                        <h3>🛡️ Cybersécurité</h3>
+                        <p>Linux, sécurité web, guide débutant, stickers thématiques.</p>
+                    </article>
+                </div>
+
+                <div class="info-cta">
+                    <a href="content/produits.html?cat=Informatique" class="btn btn-yellow">
+                        Voir tous les packs Informatique →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">📚 Programme officiel UMMTO</span>
+                    <h2>Un pack pour <span class="accent">chaque module</span> de la L2 Informatique.</h2>
+                    <p class="section-lead">
+                        On a épluché le prospectus officiel du département d'Informatique de la
+                        FGEI et conçu des packs collés au programme réel des semestres 3 et 4.
+                    </p>
+                </header>
+
+                <div class="modules-grid">
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Architecture des ordinateurs</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Algorithmique &amp; structures de données 3</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Systèmes d'information (MERISE)</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Théorie des graphes</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Méthodes numériques</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3</span>
+                        <h4>Logique mathématique</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S4</span>
+                        <h4>Théorie des langages</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S4</span>
+                        <h4>Système d'exploitation 1</h4>
+                        <a href="content/produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                </div>
+
+                <p class="modules-note">
+                    ✨ Aussi disponibles : packs <strong>CPI</strong>, <strong>Cycle Ingénieur Info</strong>,
+                    <strong>Master SII (IA &amp; Big Data)</strong> et <strong>Master Réseaux</strong>.
+                </p>
+            </div>
+        </section>
+
+        <section class="campus-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">🚚 Livraison</span>
+                    <h2>On livre sur <span class="accent">tous les sites UMMTO</span>.</h2>
+                    <p class="section-lead">
+                        Que tu sois à Hasnaoua, Bastos, Tamda, Boukhalfa ou Oued Aïssi —
+                        on dépose ton pack directement à ta cité ou à ton portail de campus.
+                        Livraison <strong>gratuite sur campus</strong>.
+                    </p>
+                </header>
+
+                <div class="campus-grid">
+                    <article class="campus-card">
+                        <span class="campus-pin">📍</span>
+                        <h4>Hasnaoua I</h4>
+                        <p>Cité universitaire historique &amp; rectorat</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📍</span>
+                        <h4>Hasnaoua II — Bastos</h4>
+                        <p>FGEI, Faculté des Sciences, Pôle Technologique</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📍</span>
+                        <h4>Tamda 1 &amp; 2</h4>
+                        <p>Pôle universitaire le plus récent (2 700+ places)</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📍</span>
+                        <h4>Boukhalfa</h4>
+                        <p>Pôle Génie de la Construction &amp; cités</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📍</span>
+                        <h4>Oued Aïssi</h4>
+                        <p>Site historique (1977) à 10 km à l'est</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🏠</span>
+                        <h4>Cités universitaires</h4>
+                        <p>M'Douha · Boukhalfa · Draâ Ben Khedda · Rhahlia · Tamda</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">Les + populaires</span>
+                    <h2>Quelques packs qui cartonnent ce mois-ci</h2>
+                </header>
+
+                <div class="popular-grid" id="popularGrid">
+
+                </div>
+
+                <div class="info-cta">
+                    <a href="content/produits.html" class="btn btn-primary">Voir toute la boutique →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">⭐ Ils ont testé</span>
+                    <h2>Ce qu'en disent les <span class="accent">étudiants UMMTO</span>.</h2>
+                </header>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                        <p class="testimonial-text">
+                            J'avais zéro idée de quoi acheter pour le S3 (ASD3, Architecture, Théorie des graphes…).
+                            J'ai pris le pack ASD3 et le pack Architecture, et franchement ça m'a sauvé pour les EMD.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">YK</div>
+                            <div class="testimonial-meta">
+                                <strong>Yanis K.</strong>
+                                <span>L2 Informatique · FGEI Bastos</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                        <p class="testimonial-text">
+                            Livraison gratuite à la cité Tamda, le pack rentrée est arrivé en deux jours.
+                            J'avais besoin de tout pour démarrer, là c'était clé en main.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">LM</div>
+                            <div class="testimonial-meta">
+                                <strong>Lila M.</strong>
+                                <span>L1 Sciences Économiques · Tamda</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="4 étoiles sur 5">★★★★☆</div>
+                        <p class="testimonial-text">
+                            Le quiz m'a recommandé le pack Master SII, parfait pour la spé IA.
+                            Le polycopié Deep Learning est vraiment bien fait, j'ai gagné un temps fou.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AB</div>
+                            <div class="testimonial-meta">
+                                <strong>Amel B.</strong>
+                                <span>M1 Systèmes Informatiques Intelligents</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                        <p class="testimonial-text">
+                            Je suis en CPI à la FGEI, j'ai pris le pack CPI. Les fiches concours sont
+                            précieuses, et la calculatrice programmable est de bonne qualité. Ça vaut le prix.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SH</div>
+                            <div class="testimonial-meta">
+                                <strong>Sami H.</strong>
+                                <span>2ᵉ année CPI · Hasnaoua II</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                        <p class="testimonial-text">
+                            Étudiante en médecine à Hasnaoua, j'avais peur que le site soit que pour les
+                            informaticiens. Mais le pack Médecine est vraiment adapté à nos cours.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">DK</div>
+                            <div class="testimonial-meta">
+                                <strong>Dyhia K.</strong>
+                                <span>L2 Médecine · Hasnaoua</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                        <p class="testimonial-text">
+                            Paiement BaridiMob accepté, livraison rapide à la cité Boukhalfa, et un vrai pack
+                            Réseaux avec câble RJ45 + stickers Cisco. Bref, fait pour nous.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RT</div>
+                            <div class="testimonial-meta">
+                                <strong>Rayan T.</strong>
+                                <span>M1 Réseaux · Cité Boukhalfa</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">❓ Questions fréquentes</span>
+                    <h2>Tout ce que tu te demandes <span class="accent">avant de commander</span>.</h2>
+                </header>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Faut-il être étudiant à l'UMMTO pour commander ?</summary>
+                        <p>
+                            Non, le site est ouvert à tous. Mais nos packs sont pensés pour les programmes
+                            de l'UMMTO (FGEI, Faculté des Sciences, Médecine, etc.), donc les étudiants
+                            d'autres universités algériennes y trouveront aussi leur compte si leurs cursus
+                            sont similaires.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Combien de temps prend la livraison ?</summary>
+                        <p>
+                            <strong>1 à 2 jours</strong> sur les campus UMMTO (Hasnaoua, Bastos, Tamda,
+                            Boukhalfa, Oued Aïssi) et les cités universitaires de la wilaya.
+                            <strong>2 à 5 jours</strong> en livraison à domicile dans le reste de l'Algérie via
+                            Yalidine ou ZR Express.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Comment fonctionne le quiz "Trouve ton pack idéal" ?</summary>
+                        <p>
+                            Tu réponds à 4 questions (filière, niveau, budget, besoin). Si tu choisis
+                            <strong>Informatique</strong>, on pousse 2 questions supplémentaires
+                            (matière à renforcer + objectif). Notre algorithme croise tes réponses avec
+                            le programme officiel de l'UMMTO et te recommande <strong>un pack précis</strong>
+                            que tu peux ajouter au panier en un clic.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Quels modes de paiement acceptez-vous ?</summary>
+                        <p>
+                            Trois options : <strong>paiement à la livraison</strong> (espèces, le plus simple),
+                            <strong>BaridiMob</strong> (l'app d'Algérie Poste, instantané) et
+                            <strong>virement CCP</strong> classique. Les étudiants choisissent
+                            généralement BaridiMob pour ne pas avoir à se déplacer.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Les packs L2 Informatique suivent-ils vraiment le programme UMMTO ?</summary>
+                        <p>
+                            Oui. On s'est basés sur le <em>prospectus officiel de la Licence Informatique
+                            de la FGEI</em> publié sur ummto.dz. Les modules couverts : Architecture des
+                            ordinateurs, ASD3, Théorie des graphes, Systèmes d'information, Méthodes
+                            numériques, Logique mathématique (S3), Théorie des langages, Système
+                            d'exploitation 1 (S4) — tous présents dans la boutique.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Puis-je retourner un pack si ça ne me convient pas ?</summary>
+                        <p>
+                            Oui, tu disposes de <strong>7 jours</strong> à partir de la réception pour
+                            retourner un pack non ouvert et non utilisé. On rembourse intégralement le
+                            prix du pack (hors frais de livraison initiaux).
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Les prix sont-ils négociables pour les groupes ?</summary>
+                        <p>
+                            Oui ! Pour les <strong>commandes groupées</strong> (chambre de cité, groupe TD,
+                            club étudiant), on propose <strong>-15 % à partir de 5 packs</strong>. Contacte-nous
+                            par mail ou via Instagram avant de commander.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">
+                    <img src="images/logo.svg" alt="" class="brand-logo">
+                    <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+                </div>
+                <p class="footer-tagline">Le kit qui te suit, de la L1 au Master.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="content/produits.html">Boutique</a></li>
+                    <li><a href="content/quiz.html">Mon Pack</a></li>
+                    <li><a href="content/ummto.html">Guide UMMTO</a></li>
+                    <li><a href="content/commande.html">Panier</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Compte</h4>
+                <ul>
+                    <li><a href="content/inscription.html">Inscription</a></li>
+                    <li><a href="content/connexion.html">Connexion</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact UMMTO</h4>
+                <ul>
+                    <li>BP 17, Oued Aïssi</li>
+                    <li>15000 Tizi-Ouzou, Algérie</li>
+                    <li>📞 026 21 89 95</li>
+                    <li>🌐 <a href="https://www.ummto.dz" target="_blank" rel="noopener">ummto.dz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <small>&copy; 2025/2026 — UMMTO Student Kit · Projet universitaire UMMTO · Module Développement d'Applications Web</small>
+        </div>
+    </footer>
+
+    <script src="javascript/products.js"></script>
+    <script src="javascript/cart.js"></script>
+    <script src="javascript/auth.js"></script>
+    <script src="javascript/theme.js"></script>
+    <script>
+        // Affichage des packs populaires sur la page d'accueil
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof renderPopularPacks === 'function') {
+                renderPopularPacks('popularGrid', 4);
+            }
+        });
+    </script>
+</body>
+</html>

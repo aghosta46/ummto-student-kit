@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide étudiant UMMTO : facultés, départements, campus, cités universitaires, programme L2 Informatique. Tout ce qu'il faut savoir pour réussir à l'Université Mouloud Mammeri de Tizi-Ouzou.">
+    <title>Guide étudiant UMMTO | UMMTO Student Kit</title>
+    <link rel="stylesheet" href="../style/design.css">
+    <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand" aria-label="Accueil UMMTO Student Kit">
+                <img src="../images/logo.svg" alt="" class="brand-logo">
+                <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produits.html">Boutique</a></li>
+                    <li><a href="quiz.html">Mon Pack</a></li>
+                    <li><a href="ummto.html" class="active">Guide UMMTO</a></li>
+                    <li><a href="commande.html">Panier <span id="cartCount" class="cart-badge">0</span></a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="inscription.html">Inscription</a></li>
+                    <li class="auth-link" data-when="logged-out"><a href="connexion.html" class="btn-nav">Connexion</a></li>
+                    <li class="auth-link" data-when="logged-in"><span id="userGreeting" class="user-greeting"></span></li>
+                    <li class="auth-link" data-when="logged-in"><a href="#" id="logoutBtn" class="btn-nav">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="quiz-section">
+            <div class="container">
+                <header class="quiz-header">
+                    <span class="badge badge-ummto">★ Guide étudiant officieux</span>
+                    <h1>Tout savoir sur l'<span class="accent">UMMTO</span>.</h1>
+                    <p class="quiz-lead">
+                        L'Université Mouloud Mammeri de Tizi-Ouzou en chiffres, en facultés, en
+                        campus et en programmes. Ce guide t'aide à choisir le bon pack — et au-delà,
+                        à mieux naviguer ta vie universitaire.
+                    </p>
+                </header>
+            </div>
+        </section>
+
+        <section class="modules-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">📊 En chiffres</span>
+                    <h2>L'UMMTO, c'est <span class="accent">bien plus qu'une université</span>.</h2>
+                </header>
+
+                <div class="modules-grid">
+                    <article class="module-chip">
+                        <span class="module-sem">1977</span>
+                        <h4>Année de fondation</h4>
+                        <a class="module-link">Centre Universitaire de Tizi-Ouzou (CUTO)</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">42K+</span>
+                        <h4>Étudiants inscrits</h4>
+                        <a class="module-link">Toutes filières confondues</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">9</span>
+                        <h4>Facultés</h4>
+                        <a class="module-link">Et 30+ départements</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">6</span>
+                        <h4>Campus principaux</h4>
+                        <a class="module-link">Hasnaoua, Bastos, Tamda 1&amp;2, Boukhalfa, Oued Aïssi</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">8K+</span>
+                        <h4>Lits en cités</h4>
+                        <a class="module-link">Sur 7 résidences universitaires</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">132</span>
+                        <h4>Bus universitaires</h4>
+                        <a class="module-link">35 000 étudiants transportés</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="campus-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">🏛️ Les 9 facultés</span>
+                    <h2>Toutes les <span class="accent">facultés UMMTO</span> en un coup d'œil.</h2>
+                </header>
+
+                <div class="campus-grid">
+                    <article class="campus-card">
+                        <span class="campus-pin">⚡</span>
+                        <h4>FGEI</h4>
+                        <p>Génie Électrique &amp; Informatique<br>
+                        Informatique · Électrotechnique · Automatique · Électronique · Télécoms · Génie Bio</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🔬</span>
+                        <h4>FS</h4>
+                        <p>Sciences<br>Mathématiques · MI · Physique · Chimie · Tronc Commun ST</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🏗️</span>
+                        <h4>FGC</h4>
+                        <p>Génie de la Construction<br>Génie Civil · Génie Mécanique · Architecture</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🩺</span>
+                        <h4>Médecine</h4>
+                        <p>Médecine · Médecine dentaire · Pharmacie</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🌱</span>
+                        <h4>FSBSA</h4>
+                        <p>Sciences Biologiques &amp; Agronomiques</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">⚖️</span>
+                        <h4>Droit &amp; Sc. Politiques</h4>
+                        <p>Droit · Sciences Politiques</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📊</span>
+                        <h4>FESCSG</h4>
+                        <p>Sciences Économiques, Commerciales &amp; de Gestion</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🌍</span>
+                        <h4>Lettres &amp; Langues</h4>
+                        <p>Français · Anglais · Arabe · Tamazight (DLCA)</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📚</span>
+                        <h4>FSHS</h4>
+                        <p>Sciences Humaines &amp; Sociales<br>Histoire · Sociologie · Philosophie · Psychologie</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">📚 Programme officiel</span>
+                    <h2>Le programme de la <span class="accent">L2 Informatique UMMTO</span>.</h2>
+                    <p class="section-lead">
+                        Source : prospectus officiel publié sur ummto.dz par le département d'Informatique
+                        de la FGEI. Voici les modules que tu vas suivre — et le pack qui colle à chacun.
+                    </p>
+                </header>
+
+                <div class="modules-grid">
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEF</span>
+                        <h4>Architecture des ordinateurs</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEF</span>
+                        <h4>Algorithmique &amp; structures de données 3</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEF</span>
+                        <h4>Systèmes d'information (MERISE)</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEM</span>
+                        <h4>Théorie des graphes</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEM</span>
+                        <h4>Méthodes numériques</h4>
+                        <a class="module-link">Pack en préparation</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UEM</span>
+                        <h4>Logique mathématique</h4>
+                        <a class="module-link">Pack en préparation</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S3 — UED</span>
+                        <h4>Langue étrangère 2 (Anglais)</h4>
+                        <a class="module-link">—</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S4 — UEF</span>
+                        <h4>Théorie des langages</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                    <article class="module-chip">
+                        <span class="module-sem">S4 — UEF</span>
+                        <h4>Système d'exploitation 1</h4>
+                        <a href="produits.html?cat=Informatique" class="module-link">Voir le pack →</a>
+                    </article>
+                </div>
+
+                <p class="modules-note">
+                    💡 <strong>UEF</strong> = Unité d'Enseignement Fondamentale ·
+                    <strong>UEM</strong> = Méthodologique ·
+                    <strong>UED</strong> = Découverte (Langues, etc.)
+                </p>
+            </div>
+        </section>
+
+        <section class="campus-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">🎯 Et après la L3 ?</span>
+                    <h2>Les <span class="accent">Masters Informatique</span> de la FGEI.</h2>
+                    <p class="section-lead">
+                        Quatre spécialités de Master accessibles après la Licence d'informatique générale,
+                        plus le Cycle Préparatoire et le Cycle Ingénieur.
+                    </p>
+                </header>
+
+                <div class="campus-grid">
+                    <article class="campus-card">
+                        <span class="campus-pin">🧠</span>
+                        <h4>Master SII</h4>
+                        <p>Systèmes Informatiques Intelligents<br>
+                        IA, Deep Learning, Big Data, Méta-heuristiques</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">📡</span>
+                        <h4>Master Réseaux</h4>
+                        <p>RMSE — Réseaux, Mobilité, Systèmes Embarqués</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">💼</span>
+                        <h4>Master ISI</h4>
+                        <p>Ingénierie des Systèmes d'Information<br>
+                        Génie logiciel, BDD avancées, architecture</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🛠️</span>
+                        <h4>Master CPI</h4>
+                        <p>Conduite de Projets Informatiques<br>
+                        Méthodes Agile, gestion d'équipe, Architecture logicielle</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">🎓</span>
+                        <h4>CPI</h4>
+                        <p>Cycle Préparatoire Ingénieur<br>2 ans de prépa intensive avant le Cycle Ingénieur</p>
+                    </article>
+                    <article class="campus-card">
+                        <span class="campus-pin">⚙️</span>
+                        <h4>Cycle Ingénieur</h4>
+                        <p>Diplôme d'État d'ingénieur en informatique<br>3 ans après le CPI ou la L2 (concours)</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="eyebrow">📍 Infos pratiques</span>
+                    <h2>Adresses, contacts, plateformes UMMTO.</h2>
+                </header>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary>Adresse postale &amp; téléphone</summary>
+                        <p>
+                            <strong>Université Mouloud Mammeri de Tizi-Ouzou</strong><br>
+                            BP 17, Oued Aïssi — 15000 Tizi-Ouzou, Algérie<br>
+                            📞 026 21 89 95 · 🌐 <a href="https://www.ummto.dz" target="_blank" rel="noopener">www.ummto.dz</a>
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Plateforme e-learning &amp; Moodle</summary>
+                        <p>
+                            La plateforme e-learning officielle est accessible à
+                            <strong>elearning.ummto.dz</strong> et <strong>teleensm.ummto.dz</strong>. Chaque
+                            étudiant a un compte Moodle où il retrouve les cours, polycopiés, devoirs et
+                            forums de discussion. Pour les L1 Informatique, un espace dédié est disponible
+                            sur Moodle pour les trois sections.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Inscriptions &amp; réinscriptions</summary>
+                        <p>
+                            Les anciens étudiants se réinscrivent en ligne via la plateforme nationale de
+                            paiement <strong>progres.mesrs.dz/epaiement</strong>. La période s'étend
+                            généralement de mi-juillet à fin juillet. Les nouveaux bacheliers passent par
+                            les services centraux du campus Hasnaoua.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Cités universitaires &amp; restauration</summary>
+                        <p>
+                            La <strong>Direction des Œuvres Universitaires (DOU)</strong> gère 7 résidences :
+                            M'Douha, Oued Aïssi (×2), Didouche Mourad (ex-ILE), Boukhalfa (×2), Draâ Ben
+                            Khedda. Capacité totale d'environ <strong>8 000 lits</strong>, avec récemment
+                            l'ouverture de Rhahlia (1 500 lits) et Tamda (2 500 lits).
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Transport universitaire</summary>
+                        <p>
+                            <strong>132 bus</strong> assurent le transport quotidien d'environ
+                            <strong>35 000 étudiants</strong> entre les cités, les campus et la ville. Les
+                            arrêts principaux : portails sud / est / ouest de Hasnaoua, gare routière
+                            Bastos, et navettes pour Tamda et Boukhalfa.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Concours d'accès aux Masters</summary>
+                        <p>
+                            Les candidats au Master FGEI passent un concours national. En 2024-2025, les
+                            spécialités ouvertes incluaient : <em>Réseaux et télécommunications,
+                            Électronique des systèmes embarqués, Instrumentation, Microélectronique</em>.
+                            Pour l'Informatique, les masters SII, ISI, CPI et Réseaux/RMSE sont les
+                            principales options.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <div class="container" style="text-align:center;">
+                <h2 style="margin-bottom:14px;">Prêt à équiper ta rentrée ? 🚀</h2>
+                <p class="section-lead" style="margin-bottom:28px;">
+                    On a un pack pour chaque module, chaque filière, chaque budget.
+                </p>
+                <div class="hero-ctas" style="justify-content:center;">
+                    <a href="quiz.html" class="btn btn-primary">🎯 Trouver mon pack idéal</a>
+                    <a href="produits.html" class="btn btn-secondary">Voir la boutique →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">
+                    <img src="../images/logo.svg" alt="" class="brand-logo">
+                    <span class="brand-text">UMMTO <strong>Student Kit</strong></span>
+                </div>
+                <p class="footer-tagline">Le kit qui te suit, de la L1 au Master.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="produits.html">Boutique</a></li>
+                    <li><a href="quiz.html">Mon Pack</a></li>
+                    <li><a href="ummto.html">Guide UMMTO</a></li>
+                    <li><a href="commande.html">Panier</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Compte</h4>
+                <ul>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="connexion.html">Connexion</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact UMMTO</h4>
+                <ul>
+                    <li>BP 17, Oued Aïssi</li>
+                    <li>15000 Tizi-Ouzou, Algérie</li>
+                    <li>📞 026 21 89 95</li>
+                    <li>🌐 <a href="https://www.ummto.dz" target="_blank" rel="noopener">ummto.dz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <small>&copy; 2025/2026 — UMMTO Student Kit · Projet universitaire UMMTO · Module Développement d'Applications Web</small>
+        </div>
+    </footer>
+
+    <script src="../javascript/products.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/theme.js"></script>
+</body>
+</html>
