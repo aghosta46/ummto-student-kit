@@ -1464,6 +1464,12 @@ function renderProducts() {
             ? "Aucun pack ne correspond à tes filtres."
             : `${filtered.length} pack${filtered.length > 1 ? 's' : ''} trouvé${filtered.length > 1 ? 's' : ''}.`;
     }
+    const headerCount = document.getElementById('shopHeaderCount');
+    if (headerCount) {
+        headerCount.textContent = filtered.length > 0
+            ? `· ${filtered.length} pack${filtered.length > 1 ? 's' : ''}`
+            : '';
+    }
 
     if (filtered.length === 0) {
         grid.innerHTML = `
@@ -1484,9 +1490,84 @@ function renderProducts() {
     grid.querySelectorAll('[data-add]').forEach(btn => {
         btn.addEventListener('click', e => {
             e.preventDefault();
+            e.stopPropagation();
             if (typeof addToCart === 'function') {
                 addToCart(btn.getAttribute('data-add'), 1);
             }
         });
+    });
+
+    grid.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', e => {
+            if (e.target.closest('[data-add]')) return;
+            const id = card.getAttribute('data-id');
+            const product = PRODUCTS.find(p => p.id === id);
+            if (product) openProductModal(product);
+        });
+    });
+}
+
+function openProductModal(product) {
+    let overlay = document.getElementById('productModalOverlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'productModalOverlay';
+        overlay.className = 'product-modal-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    const levelStr = Array.isArray(product.level) ? product.level.join(' · ') : product.level;
+    const imageFile = product.image || (product.id + '.jpg');
+    const imageSrc = imagesBasePath() + imageFile;
+    const matieresHtml = product.matieres
+        ? `<div class="modal-section"><strong>Matières couvertes</strong><div class="modal-tags">${product.matieres.map(m => `<span>${escapeHtmlProd(m)}</span>`).join('')}</div></div>`
+        : '';
+    const contentsHtml = product.contents
+        ? `<div class="modal-section"><strong>Contenu du pack</strong><ul class="modal-list">${product.contents.map(c => `<li>${escapeHtmlProd(c)}</li>`).join('')}</ul></div>`
+        : '';
+
+    overlay.innerHTML = `
+        <div class="product-modal" role="dialog" aria-modal="true">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <div class="modal-thumb">
+                <img src="${escapeHtmlProd(imageSrc)}" alt="${escapeHtmlProd(product.name)}" onerror="this.remove();">
+                <span class="modal-emoji">${product.thumb}</span>
+            </div>
+            <div class="modal-body">
+                <span class="modal-cat">${escapeHtmlProd(product.category)}${product.subcategory ? ' · ' + escapeHtmlProd(product.subcategory) : ''}</span>
+                <h2>${escapeHtmlProd(product.name)}</h2>
+                <p class="modal-desc">${escapeHtmlProd(product.description)}</p>
+                <div class="modal-meta">
+                    <span><strong>Filière</strong> ${escapeHtmlProd(product.filiere)}</span>
+                    <span><strong>Niveau</strong> ${escapeHtmlProd(levelStr)}</span>
+                </div>
+                ${contentsHtml}
+                ${matieresHtml}
+                <div class="modal-footer">
+                    <div class="modal-price">${formatPrice(product.price)}</div>
+                    <button class="btn btn-primary modal-add" data-add="${escapeHtmlProd(product.id)}">+ Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    const close = () => {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+    overlay.querySelector('.modal-close').addEventListener('click', close);
+    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function esc(e) {
+        if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+    });
+    overlay.querySelector('[data-add]').addEventListener('click', e => {
+        e.preventDefault();
+        if (typeof addToCart === 'function') {
+            addToCart(product.id, 1);
+        }
+        close();
     });
 }
