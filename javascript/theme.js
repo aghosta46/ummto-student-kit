@@ -16,8 +16,8 @@
     }
 
     function getStoredTheme() {
-        try { return localStorage.getItem(STORAGE_KEY) || 'light'; }
-        catch (e) { return 'light'; }
+        try { return localStorage.getItem(STORAGE_KEY) || 'dark'; }
+        catch (e) { return 'dark'; }
     }
 
     function storeTheme(theme) {
