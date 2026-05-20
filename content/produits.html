@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,21 +39,15 @@
 
     <main>
 
-        <section class="shop-header">
+        <section class="shop-header shop-header-compact">
             <div class="container">
-                <span class="badge badge-ummto">★ Spécial étudiants UMMTO</span>
-                <h1>La boutique des étudiants.</h1>
-                <p class="shop-lead">
-                    Tous nos packs et accessoires, avec une mise en avant spéciale pour la
-                    filière <strong>Informatique</strong>. Utilise les filtres pour trouver
-                    exactement ce qu'il te faut.
-                </p>
+                <h1>Boutique <span class="shop-header-count" id="shopHeaderCount"></span></h1>
             </div>
         </section>
 
         <section class="shop-filters">
             <div class="container">
-                <div class="filters-grid">
+                <div class="filters-grid filters-grid-compact">
 
                     <div class="filter-group filter-search">
                         <label for="searchInput" class="visually-hidden">Recherche</label>
@@ -61,9 +55,8 @@
                     </div>
 
                     <div class="filter-group">
-                        <label for="categoryFilter">Catégorie</label>
-                        <select id="categoryFilter">
-                            <option value="all">Toutes</option>
+                        <select id="categoryFilter" aria-label="Catégorie">
+                            <option value="all">📂 Toutes catégories</option>
                             <option value="Informatique">Informatique</option>
                             <option value="Révision">Révision</option>
                             <option value="Organisation">Organisation</option>
@@ -75,9 +68,8 @@
                     </div>
 
                     <div class="filter-group">
-                        <label for="filiereFilter">Filière</label>
-                        <select id="filiereFilter">
-                            <option value="all">Toutes</option>
+                        <select id="filiereFilter" aria-label="Filière">
+                            <option value="all">🎓 Toutes filières</option>
                             <option value="Informatique">Informatique</option>
                             <option value="Médecine">Médecine</option>
                             <option value="Biologie">Biologie</option>
@@ -87,30 +79,28 @@
                     </div>
 
                     <div class="filter-group">
-                        <label for="sortSelect">Tri par prix</label>
-                        <select id="sortSelect">
-                            <option value="default">Par défaut</option>
-                            <option value="asc">Prix croissant ↑</option>
-                            <option value="desc">Prix décroissant ↓</option>
+                        <select id="sortSelect" aria-label="Tri par prix">
+                            <option value="default">↕️ Tri par défaut</option>
+                            <option value="asc">↑ Prix croissant</option>
+                            <option value="desc">↓ Prix décroissant</option>
                         </select>
                     </div>
 
-                    <button id="resetFilters" class="btn btn-ghost">Réinitialiser</button>
+                    <button id="resetFilters" class="btn btn-ghost btn-small">Reset</button>
                 </div>
 
-                <div class="subcat-bar" id="subcatBar">
-                    <span class="subcat-label">Sous-catégories Informatique :</span>
+                <div class="subcat-bar subcat-bar-compact" id="subcatBar">
                     <div class="subcat-chips" id="subcatChips">
                         <button class="chip chip-active" data-sub="all">Toutes</button>
                         <button class="chip" data-sub="Programmation">Programmation</button>
                         <button class="chip" data-sub="Mathématiques">Mathématiques</button>
                         <button class="chip" data-sub="Système d'exploitation">Système &amp; Archi</button>
                         <button class="chip" data-sub="Réseaux">Réseaux</button>
-                        <button class="chip" data-sub="Base de données">Base de données</button>
-                        <button class="chip" data-sub="Développement Web">Développement Web</button>
-                        <button class="chip" data-sub="Théorie des langages">Théorie des langages</button>
+                        <button class="chip" data-sub="Base de données">BDD</button>
+                        <button class="chip" data-sub="Développement Web">Web</button>
+                        <button class="chip" data-sub="Théorie des langages">Langages</button>
                         <button class="chip" data-sub="Cybersécurité">Cybersécurité</button>
-                        <button class="chip" data-sub="Accessoires PC">Accessoires PC</button>
+                        <button class="chip" data-sub="Accessoires PC">Accessoires</button>
                     </div>
                 </div>
             </div>
@@ -133,7 +123,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
