@@ -475,7 +475,8 @@
             if (pack.id === speToPack[a.spe]) score += 40;
         }
 
-        if (a.besoin === 'rentree' && /rentree|cpi/.test(pack.id)) score += 15;
+        if (a.besoin === 'rentree' && /rentree|cpi/.test(pack.id)) score += 40;
+        if (a.besoin === 'rentree' && /revision/.test(pack.id)) score -= 20;
         if (a.besoin === 'concours' && /master|cpi/.test(pack.id)) score += 12;
         if (a.besoin === 'rien' && pack.popular) score += 8;
 
