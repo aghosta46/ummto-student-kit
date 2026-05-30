@@ -3118,3 +3118,20 @@ section h2 {
         font-size: 0.6rem !important;
     }
 }
+
+@media (max-width: 720px) {
+    .hero {
+        padding-top: 48px !important;
+    }
+    .badge-ummto {
+        box-shadow: none !important;
+        margin-top: 4px !important;
+        display: inline-block !important;
+    }
+    .hero-text {
+        padding-top: 8px !important;
+    }
+    main {
+        overflow-x: hidden !important;
+    }
+}
