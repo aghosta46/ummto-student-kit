@@ -520,8 +520,8 @@ const PRODUCTS = [
     {
         id: 'pack-revision-l2',
         name: 'Pack Révision Info L2 (tout-en-un)',
-        category: 'Révision',
-        subcategory: 'Révision Informatique L2',
+        category: 'Informatique',
+        subcategory: 'Programmation',
         filiere: 'Informatique',
         level: ['L1', 'L2'],
         price: 1900,
@@ -634,7 +634,7 @@ const PRODUCTS = [
     {
         id: 'pack-langues',
         name: 'Pack Lettres et Langues',
-        category: 'Accessoires PC',
+        category: 'Langues',
         subcategory: '',
         filiere: 'Langues',
         level: ['L1', 'L2', 'L3', 'M1'],
@@ -1189,7 +1189,7 @@ const PRODUCTS = [
     {
         id: 'pack-langues-traduction',
         name: 'Pack Traduction & Linguistique',
-        category: 'Accessoires PC',
+        category: 'Langues',
         subcategory: 'Langues',
         filiere: 'Langues',
         level: ['L1', 'L2', 'L3'],
@@ -1210,7 +1210,7 @@ const PRODUCTS = [
     {
         id: 'pack-langues-litterature',
         name: 'Pack Littérature',
-        category: 'Accessoires PC',
+        category: 'Langues',
         subcategory: 'Langues',
         filiere: 'Langues',
         level: ['L1', 'L2', 'L3'],
@@ -1231,7 +1231,7 @@ const PRODUCTS = [
     {
         id: 'pack-langues-tamazight',
         name: 'Pack Langue & culture amazighes',
-        category: 'Accessoires PC',
+        category: 'Langues',
         subcategory: 'Tamazight',
         filiere: 'Langues',
         level: ['L1', 'L2', 'L3'],
